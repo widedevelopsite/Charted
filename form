@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>form</title>
+</head>
+<body>
+  <form id="myForm">
+    <fieldset>
+      <legend style="text-align:center">Personal Details</legend>
+      <label for="name" id="name">Student Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input name="name" id="name" required>
+      <br><br>
+      <label for="name" id="name">Father Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input name="name" id="name" required>
+      <br><br>
+      <label for="phone" id="phone">Phone# of St:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="tel" id="phone" name="phone" required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)">
+      <br><br>
+      <label for="phone" id="phone">Phone# of guardian:</label>
+      <input type="tel" id="phone" name="phone" required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)">
+      <br><br>
+      <label for="Cnic" id="Cnic">CNIC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="tel" id="Cnic" maxlength=15 style="font-size:13.6px" placeholder="XXXXX-XXXXXXX-X" oninput="formatCNIC(this)">
+      <br><br>
+      <label for="email" id="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input  id="email" placeholder="example@gmail.com">
+      <br><br>
+      <label for="colification" id="colification" >Colification:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <select name="phone" required>
+      <option value="colification">Select:</option>
+      <option value="colification">Matric:</option>
+      <option value="colification">Inter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+      </select>
+      <br><br>
+      <label for="Department" id="Department" >Department:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <select name="Department" required>
+      <option value="Department">Select:</option>
+      <option value="Department">Bs IT:</option>
+      <option value="Department">Bs Science:</option>
+      </select>
+      <br><br>
+      <label for="inter session" id="inter session">Inter session:</label>
+      <br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;From:<input type="date">To:<input type="date">
+      <br><br>
+    </fieldset>
+  </form>
+
+  <script>
+    function formatPhoneNumber(input) {
+      const value = input.value.replace(/\D+/g, '');
+      const formattedValue = value.replace(/^(\d{4})(\d{4})(\d{3})$/, '$1-$2$3');
+      input.value = formattedValue;
+    }
+
+    function formatCNIC(input) {
+      const value = input.value.replace(/\D+/g, '');
+      const formattedValue = value.replace(/^(\d{5})(\d{7})(\d{1})$/, '$1-$2-$3');
+      input.value = formattedValue;
+    }
+  </script>
+</body>
+</html>
