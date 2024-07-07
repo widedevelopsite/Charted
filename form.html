@@ -3,7 +3,8 @@
 <head>
   <title>form</title>
 </head>
-<body style="background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GG69mByJw9UFm5ghbdDnYYRMZ-LUnSwqK3l93MmD1me0xeFHO6dQSUng&s=10'); background-repeat:no-repeat; background-attachment:fixed;background-size:100% 100%;">  <form id="myForm">
+<body style="background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GG69mByJw9UFm5ghbdDnYYRMZ-LUnSwqK3l93MmD1me0xeFHO6dQSUng&s=10'); background-repeat:no-repeat; background-attachment:fixed;background-size:100% 100%;">
+  <form id="myForm">
     <fieldset style="border-color:RGB(242, 196, 100);">
       <br>
       <legend style="text-align:center"><b>Personal Details</b></legend>
@@ -17,32 +18,31 @@
       <input type="tel" id="st_phone" name="st_phone" required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)">
       <br><br>
       <label for="f_phone" id="f_phone">Phone# of guardian:</label>
-      <input type="tel" id="f_phone" name="f_phone_no." required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)">
+      <input type="tel" id="f_phone" name="f_phone_number" required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)">
       <br><br>
-      <label for="Cnic_no." id="Cnic_no.">CNIC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-      <input type="tel" id="Cnic_no." maxlength=15 style="font-size:13.6px" placeholder="XXXXX-XXXXXXX-X" oninput="formatCNIC(this)">
+      <label for="cnic_number" id="cnic_number">CNIC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="tel" id="cnic_number" maxlength=15 style="font-size:13.6px" placeholder="XXXXX-XXXXXXX-X" oninput="formatCNIC(this)">
       <br><br>
       <label for="email" id="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input  id="email" placeholder="example@gmail.com">
+      <input id="email" placeholder="example@gmail.com">
       <br><br>
       <label for="colification" id="colification" >Colification:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <select name="colification" required>
-      <option value="colification">Select:</option>
-      <option value="colification">Matric:</option>
-      <option value="colification">Inter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+        <option value="colification">Select:</option>
+        <option value="colification">Matric:</option>
+        <option value="colification">Inter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
       </select>
       <br><br>
       <label for="Department" id="Department" >Department:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <select name="Department" required>
-      <option value="Department">Select:</option>
-      <option value="Department">Bs IT:</option>
-      <option value="Department">Bs Science:</option>
+        <option value="Department">Select:</option>
+        <option value="Department">Bs IT:</option>
+        <option value="Department">Bs Science:</option>
       </select>
       <br><br>
       <label for="inter session" id="inter session">Inter session:</label>
       <br><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      From:<input type="date">To:<input type="date">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;From:<input type="date">To:<input type="date">
       <br><br>
       <button style="margin-left:225px">submit</button>
     </fieldset>
