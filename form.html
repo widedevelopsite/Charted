@@ -8,41 +8,41 @@
     <fieldset style="border-color:RGB(242, 196, 100);">
       <br>
       <legend style="text-align:center"><b>Personal Details</b></legend>
-      <label for="name" id="name">Student Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-      <input name="name" id="name" required>
+      <label for="name" id="name" >Student Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input name="name" id="name" autocomplete="off" required>
       <br><br>
       <label for="father_name" id="father_name">Father Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-      <input name="father_name" id="father_name" required>
+      <input name="father_name" id="father_name" autocomplete="off" required>
       <br><br>
       <label for="st_phone" id="st_phone">Phone# of St:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-      <input type="tel" id="st_phone" name="st_phone" required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)">
+      <input type="tel" id="st_phone" name="st_phone" required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)" autocomplete="off">
       <br><br>
       <label for="f_phone" id="f_phone">Phone# of guardian:</label>
-      <input type="tel" id="f_phone" name="f_phone_number" required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)">
+      <input type="tel" id="f_phone" name="f_phone_number" required placeholder="XXXX-XXXXXXX" style="font-size:13.6px" maxlength="12" oninput="formatPhoneNumber(this)" autocomplete="off">
       <br><br>
       <label for="cnic_number" id="cnic_number">CNIC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-      <input type="tel" id="cnic_number" maxlength=15 style="font-size:13.6px" placeholder="XXXXX-XXXXXXX-X" oninput="formatCNIC(this)">
+      <input type="tel" id="cnic_number" maxlength=15 style="font-size:13.6px" placeholder="XXXXX-XXXXXXX-X" oninput="formatCNIC(this)" autocomplete="off" required>
       <br><br>
       <label for="email" id="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input id="email" placeholder="example@gmail.com">
+      <input id="email" placeholder="example@gmail.com" autocomplete="off" required>
       <br><br>
       <label for="colification" id="colification" >Colification:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <select name="colification" required>
-        <option value="colification">Select:</option>
+        <option value="colification"></option>
         <option value="colification">Matric:</option>
         <option value="colification">Inter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
       </select>
       <br><br>
       <label for="Department" id="Department" >Department:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <select name="Department" required>
-        <option value="Department">Select:</option>
+	<option value="Department"></option>
         <option value="Department">Bs IT:</option>
         <option value="Department">Bs Science:</option>
       </select>
       <br><br>
-      <label for="inter session" id="inter session">Inter session:</label>
+      <label for="inter session" id="inter session">Inter session</label>
       <br><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;From:<input type="date">To:<input type="date">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;From:<input type="date" required>To:<input type="date" required>
       <br><br>
       <button style="margin-left:225px">submit</button>
     </fieldset>
