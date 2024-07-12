@@ -1,0 +1,95 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Invoice page</title>
+</head>
+<body style="background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GG69mByJw9UFm5ghbdDnYYRMZ-LUnSwqK3l93MmD1me0xeFHO6dQSUng&s=10');background-attachment:local;background-repeat:no-repeat;background-size:800% ">
+<h1 style="text-align:center;color:#905010;"> INVOICE</h1>
+<form id="form no.1">
+<table border="2px" style="width:415px">
+<tbody style="width:50%">
+<tr>
+<td>
+<label> Invoice No. </label>
+<input style="margin-left:5px; width:96px;" type="text" name="invoice_No._name" id="Invoice_No._id" value="5">
+<label> Invoice Date </label>
+<input style="width:96px" type="date" name="Invoice_Date_name" id="Invoice_Date_id" required autocomplete="off">
+<br>
+<label> Client Code </label> 
+<input style="margin-left:5px;width:74.5%" type="text" list="Client_Code_list" name="Client_Code_name" id="Client_Code_id" autocomplete="off">
+<br>
+<datalist  id="Client_Code_list">
+<option value="14001001-NADEEM-AHMED"> 14001001 -NADEEM AHMED</option>
+<option value="14001002-MIRZA-BAIG"> 14001002 -MIRZA BAIG</option>
+</datalist>
+<label>Created By </label>
+<input style="margin-left:9px;width:74.4%;" type="text" name="Created_By_name" id="Created_By_id" readonly>
+<br>
+<label>Modify By </label>
+<input style="margin-left:13px; width:74.7%;" type="text" name="Modify_By_name" id="Modify_By_id" readonly>
+<br>
+<button style="margin-left:95px">save</button>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<div style="margin-top:-7.5rem; float:left; margin-left:27rem; ">
+
+<input  type="text" placeholder="Search" name="Search_field_name" id="Search_field_id" autocomplete="off">
+
+</div>
+<div style="margin-top:-7.5rem; margin-left:39.5rem; ">
+<button style="border-style:none;font-size:16px"><b>Search</b></button>
+   
+    </div>
+    <div style="margin-top:-5.5rem; float:left; margin-left:27rem; ">
+
+        <table border="2">
+          <tbody>
+              <tr>
+                  <td>
+                      Invoice
+                  </td>
+                  <td>
+                      Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </td>
+                  <td>
+                      Code
+                  </td>
+                  <td>
+                      Client_Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </td>
+                  <td>
+                      Ticket_Add
+                  </td>
+                  <td>
+                      PDF
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      4
+                  </td>
+                  <td>
+                      2024-07-04
+                  </td>
+                  <td>
+                      14001002
+                  </td>
+                  <td>
+                      MIRZA BAIG
+                  </td>
+                  <td>
+                      <a href="">Add Ticket</a>
+                  </td>
+                  <td>
+                      <a href="">PDF</a>
+                  </td>
+              </tr>
+          </tbody>  
+        </table>
+</div>
+</body>
+</html>
