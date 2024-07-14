@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="preload">
+    <title>Invoice page</title>
+    <style>
+        .highlight {
+            background-color:red;
+        }
+        body{
+            background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GG69mByJw9UFm5ghbdDnYYRMZ-LUnSwqK3l93MmD1me0xeFHO6dQSUng&s=10');
+            background-attachment:local;
+            background-repeat:no-repeat;
+            background-size:750%; 
+        }
+        h1[class="INVOICE_h1_class"]{
+          text-align:center;
+          color:#905010;
+        }
+        input[class="Invoice_No._class"] {
+          width:105.6px;
+          margin-left:2.3px;
+        }
+        input[class="Invoice_Date_class"] {
+          width:105.6px;
+        }
+        input[class="Client_Code_class"] {
+          width:307px;
+        }
+        input[class="Created_By_class"] {
+          width:307.3px;
+           margin-left:4.4px;
+        }
+        input[class="Modify_By_class"] {
+          width:307px;
+           margin-left:11px;
+         }
+         input[class="Search_input_class"] {
+          width:200px;
+           margin-left:30rem;
+           float-left;
+           margin-top:-7.5rem;
+         }
+         button[class="Search_button_class"] {
+           margin-left:43rem;
+           float-left;
+           margin-top:-7.5rem;
+         }
+         button[class="save_button_class"]{
+           margin-left:85.8px;
+         }
+         table[class="table_2_class"] {
+           margin-left:30rem;
+           float-left;
+           margin-top:-6rem;
+         }
+    </style> 
+</head>
+<body>
+<h1 class="INVOICE_h1_class"> INVOICE</h1>
+<form id="form no.1">
+<table border="2px" class="table_1_class">
+<tbody>
+<tr>
+<td>
+<label> Invoice No. </label>
+<input class="Invoice_No._class" type="text" name="invoice_No._name" id="Invoice_No._id" value="5">
+<label> Invoice Date </label>
+<input class="Invoice_Date_class" type="date" name="Invoice_Date_name" id="Invoice_Date_id" required autocomplete="off">
+<br>
+<label> Client Code </label> 
+<input class="Client_Code_class" type="text" list="Client_Code_list" name="Client_Code_name" id="Client_Code_id" autocomplete="off">
+<br>
+<datalist  id="Client_Code_list">
+<option value="14001001-NADEEM-AHMED"> 14001001 -NADEEM AHMED</option>
+<option value="14001002-MIRZA-BAIG"> 14001002 -MIRZA BAIG</option>
+</datalist>
+<label>Created By </label>
+<input class="Created_By_class" type="text" name="Created_By_name" id="Created_By_id" readonly>
+<br>
+<label>Modify By </label>
+<input class="Modify_By_class" type="text" name="Modify_By_name" id="Modify_By_id" readonly>
+<br>
+<button class="save_button_class">save</button>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<input class="Search_input_class" type="text" id="search-table" placeholder="Search...">
+<button class="Search_button_class" id="search-button">Search</button>
+<table class="table_2_class" border="2">
+          <tbody id="search-table-body">
+              <tr>
+                  <td>
+                      Invoice
+                  </td>
+                  <td>
+                      Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </td>
+                  <td>
+                      Code
+                  </td>
+                  <td>
+                      Client_Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </td>
+                  <td>
+                      Ticket_Add
+                  </td>
+                  <td>
+                      PDF
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      4
+                  </td>
+                  <td>
+                      2024-07-04
+                  </td>
+                  <td>
+                      14001002
+                  </td>
+                  <td>
+                      MIRZA BAIG
+                  </td>
+                  <td>
+                      <a href="">Add Ticket</a>
+                  </td>
+                  <td>
+                      <a href="">PDF</a>
+                  </td>
+              </tr>
+          </tbody>  
+        </table>
+
+<script>
+    const searchInput = document.getElementById('search-table');
+    const searchButton = document.getElementById('search-button');
+    const searchTableBody = document.getElementById('search-table-body');
+
+    searchButton.addEventListener('click', () => {
+      const searchTerm = searchInput.value.trim();
+      const rows = searchTableBody.rows;
+
+      for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const cells = row.cells;
+
+        for (let j = 0; j < cells.length; j++) {
+          const cell = cells[j];
+          const text = cell.textContent;
+          const regex = new RegExp(searchTerm, 'gi');
+
+          cell.innerHTML = text.replace(regex, match => `<span class="highlight">${match}</span>`);
+        }
+      }
+    });
+</script>
+</body>
+</html>
