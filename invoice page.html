@@ -52,8 +52,8 @@
     </section>
     <section style="margin-top:-5.5rem; float:left; margin-left:29rem;margin-right:1rem ">
 
-        <table border="2" style="border-style:groove" id="table-2">
-          <tbody id="table-2-body">
+        <table border="2" style="border-style:groove" id="search-table">
+          <tbody id="search-table-body">
               <tr>
                   <td>
                       Invoice
@@ -98,9 +98,9 @@
         </table>
     </section>
     <script>
-    const searchInput = document.getElementById('table-2');
+    const searchInput = document.getElementById('search-table');
     const searchButton = document.getElementById('search-button');
-    const searchTableBody = document.getElementById('table-2-body');
+    const searchTableBody = document.getElementById('search-table-body');
 
     searchButton.addEventListener('click', () => {
       const searchTerm = searchInput.value.trim();
@@ -119,6 +119,6 @@
         }
       }
     });
-    </script>
+</script>
 </body>
 </html>
