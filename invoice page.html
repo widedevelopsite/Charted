@@ -1,6 +1,11 @@
 <!Doctype html>
 <html>
 <head>
+    <style>
+        .highlight{
+            color:red;
+            background-color: yellow;
+    </style>
     <title>Invoice page</title>
 </head>
 <body style="background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GG69mByJw9UFm5ghbdDnYYRMZ-LUnSwqK3l93MmD1me0xeFHO6dQSUng&s=10');background-attachment:local;background-repeat:no-repeat;background-size:800% ">
@@ -46,8 +51,8 @@
     </section>
     <section style="margin-top:-5.5rem; float:left; margin-left:29rem;margin-right:1rem ">
 
-        <table border="2" style="border-style:groove">
-          <tbody>
+        <table border="2" style="border-style:groove" id="table-2">
+          <tbody id="table-2-body">
               <tr>
                   <td>
                       Invoice
@@ -91,5 +96,28 @@
           </tbody>  
         </table>
     </section>
+    <script>
+    const searchInput = document.getElementById('table-2');
+    const searchButton = document.getElementById('search-button');
+    const searchTableBody = document.getElementById('table-2-body');
+
+    searchButton.addEventListener('click', () => {
+      const searchTerm = searchInput.value.trim();
+      const rows = searchTableBody.rows;
+
+      for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const cells = row.cells;
+
+        for (let j = 0; j < cells.length; j++) {
+          const cell = cells[j];
+          const text = cell.textContent;
+          const regex = new RegExp(searchTerm, 'gi');
+
+          cell.innerHTML = text.replace(regex, match => `<span class="highlight">${match}</span>`);
+        }
+      }
+    });
+    </script>
 </body>
 </html>
