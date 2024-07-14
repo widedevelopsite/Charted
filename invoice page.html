@@ -2,8 +2,7 @@
 <html>
 <head>
     <style>
-        .highlight{
-            color:red;
+        .highlight {
             background-color: yellow;
         }
     </style>
@@ -47,13 +46,12 @@
 
 </section>
 <section style="margin-top:-7.5rem; margin-left:43.5rem; ">
-<button style="border-style:none;font-size:16px" id="search-button"><b>Search</b></button>
+ <button id="search-button">Search</button>
    
     </section>
     <section style="margin-top:-5.5rem; float:left; margin-left:29rem;margin-right:1rem ">
-
-        <table border="2" style="border-style:groove" id="search-table">
-          <tbody id="search-table-body">
+<table border="2" id="search-table">
+           <tbody id="search-table-body">
               <tr>
                   <td>
                       Invoice
@@ -97,7 +95,8 @@
           </tbody>  
         </table>
     </section>
-    <script>
+    
+<script>
     const searchInput = document.getElementById('search-table');
     const searchButton = document.getElementById('search-button');
     const searchTableBody = document.getElementById('search-table-body');
