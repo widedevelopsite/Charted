@@ -1,57 +1,57 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Invoice page</title>
     <style>
         .highlight {
             background-color: yellow;
         }
     </style>
-    <title>Invoice page</title>
 </head>
 <body style="background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GG69mByJw9UFm5ghbdDnYYRMZ-LUnSwqK3l93MmD1me0xeFHO6dQSUng&s=10');background-attachment:local;background-repeat:no-repeat;background-size:800% ">
 <h1 style="text-align:center;color:#905010;"> INVOICE</h1>
 <form id="form no.1" id="search-table-body">
-<table border="2px" style="width:445px;border-style:groove">
-<tbody>
+<table border="2px" style="width:440px">
+<tbody style="width:50%">
 <tr>
 <td>
 <label> Invoice No. </label>
-<input style=" width:98px;" type="text" name="invoice_No._name" id="Invoice_No._id" value="5">
+<input style=" width:82px;" type="text" name="invoice_No._name" id="Invoice_No._id" value="5">
 <label> Invoice Date </label>
-<input style="width:98.5px" type="date" name="Invoice_Date_name" id="Invoice_Date_id" required autocomplete="off">
+<input style="width:90px" type="date" name="Invoice_Date_name" id="Invoice_Date_id" required autocomplete="off">
 <br>
 <label> Client Code </label> 
-<input style="width:75.7%" type="text" list="Client_Code_list" name="Client_Code_name" id="Client_Code_id" autocomplete="off">
+<input style="width:72.4%" type="text" list="Client_Code_list" name="Client_Code_name" id="Client_Code_id" autocomplete="off">
 <br>
 <datalist  id="Client_Code_list">
 <option value="14001001-NADEEM-AHMED"> 14001001 -NADEEM AHMED</option>
 <option value="14001002-MIRZA-BAIG"> 14001002 -MIRZA BAIG</option>
 </datalist>
 <label>Created By </label>
-<input style="margin-left:4px;width:75.7%;" type="text" name="Created_By_name" id="Created_By_id" readonly>
+<input style="margin-left:5px;width:72.7%;" type="text" name="Created_By_name" id="Created_By_id" readonly>
 <br>
 <label>Modify By </label>
-<input style="margin-left:9px; width:75.7%;" type="text" name="Modify_By_name" id="Modify_By_id" readonly>
+<input style="margin-left:10px; width:72.7%;" type="text" name="Modify_By_name" id="Modify_By_id" readonly>
 <br>
-<button style="margin-left:90px" type="submit">save</button>
+<button style="margin-left:110px" type="submit">save</button>
 <br>
 </td>
 </tr>
 </tbody>
 </table>
 </form>
-<section style="margin-top:-7.5rem; float:left; margin-left:29rem;width:600px ">
+<div style="margin-top:-7.5rem; float:left; margin-left:30rem; ">
 
-<input  type="text" placeholder="Search" name="Search_field_name" id="Search_field_id" autocomplete="off">
-
-</section>
-<section style="margin-top:-7.5rem; margin-left:43.5rem; ">
+ <input type="text" id="search-table" placeholder="Search...">
+</div>
+<div style="margin-top:-7.5rem; margin-left:47rem; ">
  <button id="search-button">Search</button>
    
-    </section>
-    <section style="margin-top:-5.5rem; float:left; margin-left:29rem;margin-right:1rem ">
-<table border="2" id="table">
-           <tbody id="search-table-body">
+    </div>
+    <div style="margin-top:-5.5rem; float:left; margin-left:30rem; ">
+
+        <table border="2" id="search-table">
+          <tbody id="search-table-body">
               <tr>
                   <td>
                       Invoice
@@ -94,8 +94,8 @@
               </tr>
           </tbody>  
         </table>
-    </section>
-    
+</div> 
+
 <script>
     const searchInput = document.getElementById('search-table');
     const searchButton = document.getElementById('search-button');
